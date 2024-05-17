@@ -6,6 +6,7 @@ import LogRocket from 'logrocket';
 import * as Sentry from "@sentry/react";
 import { useEffect } from "react";
 import { H } from 'highlight.run';
+import rg4js from 'raygun4js';
 
 export default function Home() {
 
@@ -25,6 +26,8 @@ export default function Home() {
         ],
       },
     });
+    rg4js('apiKey', 'CeofFiPVAt6ao78dbk3hw');
+    rg4js('enableCrashReporting', true);
   }, [])
 
   return (
