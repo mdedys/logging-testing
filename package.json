@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sentry/react": "^8.2.0",
+    "logrocket": "^8.1.0",
+    "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.3"
+    "react-dom": "^18"
   }
 }
