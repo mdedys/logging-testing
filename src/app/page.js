@@ -5,12 +5,26 @@ import styles from "./page.module.css";
 import LogRocket from 'logrocket';
 import * as Sentry from "@sentry/react";
 import { useEffect } from "react";
-
+import { H } from 'highlight.run';
 
 export default function Home() {
 
   useEffect(() => {
     LogRocket.init('9u6cay/test-project');
+    H.init('5g538jld', {
+      serviceName: "frontend-app",
+      tracingOrigins: true,
+      networkRecording: {
+        enabled: true,
+        recordHeadersAndBody: true,
+        urlBlocklist: [
+          // insert full or partial urls that you don't want to record here
+          // Out of the box, Highlight will not record these URLs (they can be safely removed):
+          "https://www.googleapis.com/identitytoolkit",
+          "https://securetoken.googleapis.com",
+        ],
+      },
+    });
   }, [])
 
   return (
