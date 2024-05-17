@@ -22,7 +22,8 @@ export default function Home() {
         </p>
 
         <button onClick={() => {
-          throw new Error("this is a serious error, please fix it!")
+          const a = b + 1
+          console.log(a)
         }}>Click Me and see the errors</button>
 
         <div>
